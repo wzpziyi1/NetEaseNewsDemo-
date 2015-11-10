@@ -9,13 +9,21 @@
 import UIKit
 
 class ZYNavigationBar: UINavigationBar {
-
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        for (var i = 0; i < self.subviews.count; i++){
+            let btn = self.subviews[i]
+            
+            if (btn.isKindOfClass(UIButton.self)) {
+                if (btn.center.x < self.frame.width * 0.5) {
+                    btn.frame.origin.x = 0
+                }
+                else if (btn.center.x > self.frame.width * 0.5) {
+                    btn.frame.origin.x = self.frame.width - btn.frame.width
+                }
+            }
+        }
     }
-    */
-
 }

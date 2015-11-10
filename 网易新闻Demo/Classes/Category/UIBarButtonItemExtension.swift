@@ -8,6 +8,15 @@
 
 import UIKit
 
-class UIBarButtonItemExtension: UIBarButtonItem {
+extension UIBarButtonItem {
 
+    class func barButtonItemWithTarget(target: AnyObject, action: Selector, imageName: String) ->UIBarButtonItem
+    {
+        let btn = UIButton()
+        btn.setImage(UIImage(named: imageName), forState: UIControlState.Normal)
+        btn.frame.size = (btn.currentImage?.size)!
+        btn.addTarget(target, action: action, forControlEvents: UIControlEvents.TouchUpInside)
+//        print(btn.frame)
+        return UIBarButtonItem(customView: btn)
+    }
 }

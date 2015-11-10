@@ -7,14 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		09347F0E1BF02D1800F10657 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09347F0D1BF02D1800F10657 /* AppDelegate.swift */; };
-		09347F101BF02D1800F10657 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09347F0F1BF02D1800F10657 /* ViewController.swift */; };
-		09347F131BF02D1800F10657 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09347F111BF02D1800F10657 /* Main.storyboard */; };
+		0929574B1BF091BD0050B76C /* ZYTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0929574A1BF091BD0050B76C /* ZYTitleView.swift */; };
 		09347F161BF02D1800F10657 /* ____Demo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09347F141BF02D1800F10657 /* ____Demo.xcdatamodeld */; };
 		09347F181BF02D1800F10657 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09347F171BF02D1800F10657 /* Assets.xcassets */; };
-		09347F1B1BF02D1800F10657 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09347F191BF02D1800F10657 /* LaunchScreen.storyboard */; };
 		09347F261BF02D1800F10657 /* ____DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09347F251BF02D1800F10657 /* ____DemoTests.swift */; };
 		09347F311BF02D1800F10657 /* ____DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09347F301BF02D1800F10657 /* ____DemoUITests.swift */; };
+		09347F481BF0336900F10657 /* ZYMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09347F421BF0336900F10657 /* ZYMainViewController.swift */; };
+		09347F491BF0336900F10657 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09347F461BF0336900F10657 /* AppDelegate.swift */; };
+		09347F4E1BF0387500F10657 /* UIView+AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 09347F4D1BF0387500F10657 /* UIView+AutoLayout.m */; };
+		09347F501BF03A4D00F10657 /* ZYLeftMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09347F4F1BF03A4D00F10657 /* ZYLeftMenuView.swift */; };
+		09347F561BF0472B00F10657 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09347F551BF0472B00F10657 /* UIImageExtension.swift */; };
+		09347F5D1BF04B7C00F10657 /* ZYConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09347F5C1BF04B7C00F10657 /* ZYConst.swift */; };
+		09347F5F1BF066CD00F10657 /* ZYMainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09347F5E1BF066CD00F10657 /* ZYMainNavigationController.swift */; };
+		09347F611BF0670900F10657 /* UIBarButtonItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09347F601BF0670900F10657 /* UIBarButtonItemExtension.swift */; };
+		09347F631BF06D4700F10657 /* ZYNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09347F621BF06D4700F10657 /* ZYNavigationBar.swift */; };
+		09347F651BF07C0C00F10657 /* ZYNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09347F641BF07C0C00F10657 /* ZYNewsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,13 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0929574A1BF091BD0050B76C /* ZYTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYTitleView.swift; sourceTree = "<group>"; };
 		09347F0A1BF02D1800F10657 /* 网易新闻Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "网易新闻Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		09347F0D1BF02D1800F10657 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		09347F0F1BF02D1800F10657 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		09347F121BF02D1800F10657 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		09347F151BF02D1800F10657 /* ____Demo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "____Demo.xcdatamodel"; sourceTree = "<group>"; };
 		09347F171BF02D1800F10657 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		09347F1A1BF02D1800F10657 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09347F1C1BF02D1800F10657 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09347F211BF02D1800F10657 /* 网易新闻DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "网易新闻DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09347F251BF02D1800F10657 /* ____DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "____DemoTests.swift"; sourceTree = "<group>"; };
@@ -49,6 +53,18 @@
 		09347F2C1BF02D1800F10657 /* 网易新闻DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "网易新闻DemoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09347F301BF02D1800F10657 /* ____DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "____DemoUITests.swift"; sourceTree = "<group>"; };
 		09347F321BF02D1800F10657 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09347F421BF0336900F10657 /* ZYMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYMainViewController.swift; sourceTree = "<group>"; };
+		09347F461BF0336900F10657 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		09347F4B1BF0387400F10657 /* 网易新闻Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "网易新闻Demo-Bridging-Header.h"; sourceTree = "<group>"; };
+		09347F4C1BF0387500F10657 /* UIView+AutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AutoLayout.h"; sourceTree = "<group>"; };
+		09347F4D1BF0387500F10657 /* UIView+AutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AutoLayout.m"; sourceTree = "<group>"; };
+		09347F4F1BF03A4D00F10657 /* ZYLeftMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYLeftMenuView.swift; sourceTree = "<group>"; };
+		09347F551BF0472B00F10657 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		09347F5C1BF04B7C00F10657 /* ZYConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYConst.swift; sourceTree = "<group>"; };
+		09347F5E1BF066CD00F10657 /* ZYMainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYMainNavigationController.swift; sourceTree = "<group>"; };
+		09347F601BF0670900F10657 /* UIBarButtonItemExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemExtension.swift; sourceTree = "<group>"; };
+		09347F621BF06D4700F10657 /* ZYNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYNavigationBar.swift; sourceTree = "<group>"; };
+		09347F641BF07C0C00F10657 /* ZYNewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYNewsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +115,8 @@
 		09347F0C1BF02D1800F10657 /* 网易新闻Demo */ = {
 			isa = PBXGroup;
 			children = (
-				09347F0D1BF02D1800F10657 /* AppDelegate.swift */,
-				09347F0F1BF02D1800F10657 /* ViewController.swift */,
-				09347F111BF02D1800F10657 /* Main.storyboard */,
+				09347F401BF0336900F10657 /* Classes */,
 				09347F171BF02D1800F10657 /* Assets.xcassets */,
-				09347F191BF02D1800F10657 /* LaunchScreen.storyboard */,
 				09347F1C1BF02D1800F10657 /* Info.plist */,
 				09347F141BF02D1800F10657 /* ____Demo.xcdatamodeld */,
 			);
@@ -126,6 +139,74 @@
 				09347F321BF02D1800F10657 /* Info.plist */,
 			);
 			path = "网易新闻DemoUITests";
+			sourceTree = "<group>";
+		};
+		09347F401BF0336900F10657 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				09347F431BF0336900F10657 /* Library */,
+				09347F4A1BF0385200F10657 /* Category */,
+				09347F411BF0336900F10657 /* Controller */,
+				09347F441BF0336900F10657 /* Model */,
+				09347F451BF0336900F10657 /* Other */,
+				09347F471BF0336900F10657 /* View */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		09347F411BF0336900F10657 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				09347F421BF0336900F10657 /* ZYMainViewController.swift */,
+				09347F5E1BF066CD00F10657 /* ZYMainNavigationController.swift */,
+				09347F641BF07C0C00F10657 /* ZYNewsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		09347F431BF0336900F10657 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		09347F441BF0336900F10657 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		09347F451BF0336900F10657 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				09347F461BF0336900F10657 /* AppDelegate.swift */,
+				09347F5C1BF04B7C00F10657 /* ZYConst.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		09347F471BF0336900F10657 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				09347F4F1BF03A4D00F10657 /* ZYLeftMenuView.swift */,
+				09347F621BF06D4700F10657 /* ZYNavigationBar.swift */,
+				0929574A1BF091BD0050B76C /* ZYTitleView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		09347F4A1BF0385200F10657 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				09347F4C1BF0387500F10657 /* UIView+AutoLayout.h */,
+				09347F4D1BF0387500F10657 /* UIView+AutoLayout.m */,
+				09347F4B1BF0387400F10657 /* 网易新闻Demo-Bridging-Header.h */,
+				09347F551BF0472B00F10657 /* UIImageExtension.swift */,
+				09347F601BF0670900F10657 /* UIBarButtonItemExtension.swift */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +271,7 @@
 		09347F021BF02D1700F10657 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = ZY;
 				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "王志盼";
@@ -232,9 +314,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09347F1B1BF02D1800F10657 /* LaunchScreen.storyboard in Resources */,
 				09347F181BF02D1800F10657 /* Assets.xcassets in Resources */,
-				09347F131BF02D1800F10657 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,9 +339,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09347F561BF0472B00F10657 /* UIImageExtension.swift in Sources */,
+				09347F491BF0336900F10657 /* AppDelegate.swift in Sources */,
+				09347F611BF0670900F10657 /* UIBarButtonItemExtension.swift in Sources */,
+				09347F4E1BF0387500F10657 /* UIView+AutoLayout.m in Sources */,
+				0929574B1BF091BD0050B76C /* ZYTitleView.swift in Sources */,
+				09347F481BF0336900F10657 /* ZYMainViewController.swift in Sources */,
+				09347F5D1BF04B7C00F10657 /* ZYConst.swift in Sources */,
+				09347F631BF06D4700F10657 /* ZYNavigationBar.swift in Sources */,
+				09347F651BF07C0C00F10657 /* ZYNewsViewController.swift in Sources */,
 				09347F161BF02D1800F10657 /* ____Demo.xcdatamodeld in Sources */,
-				09347F101BF02D1800F10657 /* ViewController.swift in Sources */,
-				09347F0E1BF02D1800F10657 /* AppDelegate.swift in Sources */,
+				09347F5F1BF066CD00F10657 /* ZYMainNavigationController.swift in Sources */,
+				09347F501BF03A4D00F10657 /* ZYLeftMenuView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,25 +384,6 @@
 			targetProxy = 09347F2D1BF02D1800F10657 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		09347F111BF02D1800F10657 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				09347F121BF02D1800F10657 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		09347F191BF02D1800F10657 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				09347F1A1BF02D1800F10657 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		09347F331BF02D1800F10657 /* Debug */ = {
@@ -401,10 +471,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "网易新闻Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "operation11.----Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "网易新闻Demo/Classes/Category/网易新闻Demo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -412,10 +486,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "网易新闻Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "operation11.----Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "网易新闻Demo/Classes/Category/网易新闻Demo-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -486,6 +563,7 @@
 				09347F371BF02D1800F10657 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		09347F381BF02D1800F10657 /* Build configuration list for PBXNativeTarget "网易新闻DemoTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +572,7 @@
 				09347F3A1BF02D1800F10657 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		09347F3B1BF02D1800F10657 /* Build configuration list for PBXNativeTarget "网易新闻DemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +581,7 @@
 				09347F3D1BF02D1800F10657 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
