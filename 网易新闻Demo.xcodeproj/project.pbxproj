@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0904A8A01BF1879800D8E593 /* ZYAdvertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0904A89F1BF1879800D8E593 /* ZYAdvertViewController.swift */; };
+		0904A8A31BF18CF100D8E593 /* ZYRightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0904A8A11BF18CF100D8E593 /* ZYRightViewController.swift */; };
+		0904A8A41BF18CF100D8E593 /* ZYRightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0904A8A21BF18CF100D8E593 /* ZYRightViewController.xib */; };
 		0929574B1BF091BD0050B76C /* ZYTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0929574A1BF091BD0050B76C /* ZYTitleView.swift */; };
 		09347F161BF02D1800F10657 /* ____Demo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09347F141BF02D1800F10657 /* ____Demo.xcdatamodeld */; };
 		09347F181BF02D1800F10657 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09347F171BF02D1800F10657 /* Assets.xcassets */; };
@@ -22,6 +25,9 @@
 		09347F611BF0670900F10657 /* UIBarButtonItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09347F601BF0670900F10657 /* UIBarButtonItemExtension.swift */; };
 		09347F631BF06D4700F10657 /* ZYNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09347F621BF06D4700F10657 /* ZYNavigationBar.swift */; };
 		09347F651BF07C0C00F10657 /* ZYNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09347F641BF07C0C00F10657 /* ZYNewsViewController.swift */; };
+		09B92B4A1BF310280071DAA2 /* ZYRightCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B92B491BF310280071DAA2 /* ZYRightCenterView.swift */; };
+		09B92B4D1BF313030071DAA2 /* ZYRightCenterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B92B4B1BF313030071DAA2 /* ZYRightCenterCell.swift */; };
+		09B92B4E1BF313030071DAA2 /* ZYRightCenterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09B92B4C1BF313030071DAA2 /* ZYRightCenterCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +48,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0904A89F1BF1879800D8E593 /* ZYAdvertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYAdvertViewController.swift; sourceTree = "<group>"; };
+		0904A8A11BF18CF100D8E593 /* ZYRightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYRightViewController.swift; sourceTree = "<group>"; };
+		0904A8A21BF18CF100D8E593 /* ZYRightViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZYRightViewController.xib; sourceTree = "<group>"; };
 		0929574A1BF091BD0050B76C /* ZYTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYTitleView.swift; sourceTree = "<group>"; };
 		09347F0A1BF02D1800F10657 /* 网易新闻Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "网易新闻Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09347F151BF02D1800F10657 /* ____Demo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "____Demo.xcdatamodel"; sourceTree = "<group>"; };
@@ -65,6 +74,9 @@
 		09347F601BF0670900F10657 /* UIBarButtonItemExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemExtension.swift; sourceTree = "<group>"; };
 		09347F621BF06D4700F10657 /* ZYNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYNavigationBar.swift; sourceTree = "<group>"; };
 		09347F641BF07C0C00F10657 /* ZYNewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYNewsViewController.swift; sourceTree = "<group>"; };
+		09B92B491BF310280071DAA2 /* ZYRightCenterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYRightCenterView.swift; sourceTree = "<group>"; };
+		09B92B4B1BF313030071DAA2 /* ZYRightCenterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYRightCenterCell.swift; sourceTree = "<group>"; };
+		09B92B4C1BF313030071DAA2 /* ZYRightCenterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZYRightCenterCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +172,9 @@
 				09347F421BF0336900F10657 /* ZYMainViewController.swift */,
 				09347F5E1BF066CD00F10657 /* ZYMainNavigationController.swift */,
 				09347F641BF07C0C00F10657 /* ZYNewsViewController.swift */,
+				0904A89F1BF1879800D8E593 /* ZYAdvertViewController.swift */,
+				0904A8A11BF18CF100D8E593 /* ZYRightViewController.swift */,
+				0904A8A21BF18CF100D8E593 /* ZYRightViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -193,6 +208,9 @@
 				09347F4F1BF03A4D00F10657 /* ZYLeftMenuView.swift */,
 				09347F621BF06D4700F10657 /* ZYNavigationBar.swift */,
 				0929574A1BF091BD0050B76C /* ZYTitleView.swift */,
+				09B92B491BF310280071DAA2 /* ZYRightCenterView.swift */,
+				09B92B4B1BF313030071DAA2 /* ZYRightCenterCell.swift */,
+				09B92B4C1BF313030071DAA2 /* ZYRightCenterCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -314,6 +332,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09B92B4E1BF313030071DAA2 /* ZYRightCenterCell.xib in Resources */,
+				0904A8A41BF18CF100D8E593 /* ZYRightViewController.xib in Resources */,
 				09347F181BF02D1800F10657 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,11 +361,15 @@
 			files = (
 				09347F561BF0472B00F10657 /* UIImageExtension.swift in Sources */,
 				09347F491BF0336900F10657 /* AppDelegate.swift in Sources */,
+				09B92B4A1BF310280071DAA2 /* ZYRightCenterView.swift in Sources */,
+				0904A8A31BF18CF100D8E593 /* ZYRightViewController.swift in Sources */,
+				09B92B4D1BF313030071DAA2 /* ZYRightCenterCell.swift in Sources */,
 				09347F611BF0670900F10657 /* UIBarButtonItemExtension.swift in Sources */,
 				09347F4E1BF0387500F10657 /* UIView+AutoLayout.m in Sources */,
 				0929574B1BF091BD0050B76C /* ZYTitleView.swift in Sources */,
 				09347F481BF0336900F10657 /* ZYMainViewController.swift in Sources */,
 				09347F5D1BF04B7C00F10657 /* ZYConst.swift in Sources */,
+				0904A8A01BF1879800D8E593 /* ZYAdvertViewController.swift in Sources */,
 				09347F631BF06D4700F10657 /* ZYNavigationBar.swift in Sources */,
 				09347F651BF07C0C00F10657 /* ZYNewsViewController.swift in Sources */,
 				09347F161BF02D1800F10657 /* ____Demo.xcdatamodeld in Sources */,

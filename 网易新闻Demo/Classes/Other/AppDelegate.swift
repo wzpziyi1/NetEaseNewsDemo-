@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window?.makeKeyAndVisible()
-        let vc = ZYMainViewController()
+        let vc = ZYAdvertViewController()
         self.window?.rootViewController = vc
         return true
     }

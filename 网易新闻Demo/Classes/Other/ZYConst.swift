@@ -15,6 +15,8 @@ import Foundation
 let kScreenWidth = UIScreen.mainScreen().bounds.size.width
 // 屏幕的物理高度
 let kScreenHeight = UIScreen.mainScreen().bounds.size.height
+
+let kZYRightBarButtonDidClickNotification = "kZYRightBarButtonDidClickNotification"
 /**
  *   除了一些简单的属性直接用常量表达,更推荐用全局函数来定义替代宏
  */

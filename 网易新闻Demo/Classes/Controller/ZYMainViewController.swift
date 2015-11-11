@@ -14,11 +14,13 @@ class ZYMainViewController: UIViewController, ZYLeftMenuViewDelegate {
     let leftMenuH: CGFloat = 300
     let leftMenuW: CGFloat = 150
     let duration: NSTimeInterval = 0.5
+    let margin: CGFloat = 100
+    let rightMenuW: CGFloat = kScreenWidth - 50
     
 //MARK:- UI控件
     private weak var leftMenuView: ZYLeftMenuView!
     private weak var newsVc: ZYNewsViewController!
-    private weak var showingNvc: UIViewController?
+    private weak var showingVc: UIViewController?
     
     private var coverBtn: UIButton!
     
@@ -31,6 +33,8 @@ class ZYMainViewController: UIViewController, ZYLeftMenuViewDelegate {
         self.setupVc()
         
         self.setupLeftMenuView()
+        
+        self.setupRightVc()
         
         self.setupCoverBtn()
     }
@@ -90,6 +94,13 @@ class ZYMainViewController: UIViewController, ZYLeftMenuViewDelegate {
         self.coverBtn.addTarget(self, action: Selector("clickCoverBtn:"), forControlEvents: UIControlEvents.TouchUpInside)
         
     }
+    
+    private func setupRightVc() {
+        let rightVc = ZYRightViewController()
+        rightVc.view.frame = CGRectMake(50, 0, kScreenWidth - 50, kScreenHeight)
+        self.addChildViewController(rightVc)
+    }
+    
     private func createNavigationVc(rootVc: UIViewController, title: String) ->UIViewController {
         
         let nvc = ZYMainNavigationController(rootViewController: rootVc)
@@ -111,48 +122,65 @@ class ZYMainViewController: UIViewController, ZYLeftMenuViewDelegate {
 
 //MARK:- 点击事件
     func clickLeftBarButtonItem() {
-        self.showingNvc?.view.userInteractionEnabled = false
+        self.showingVc?.view.userInteractionEnabled = false
         self.leftMenuView.hidden = false
         UIView.animateWithDuration(duration, animations: { () -> Void in
             let scale: CGFloat = (kScreenHeight - 2 * 64) / kScreenHeight
             let removeDistance: CGFloat = self.leftMenuView.frame.width - ((kScreenWidth - kScreenWidth * scale) / 2.0)
             let transform = CGAffineTransformMakeScale(scale, scale)
-            self.showingNvc!.view.transform = CGAffineTransformTranslate(transform, removeDistance, 0)
-            self.showingNvc?.view.addSubview(self.coverBtn!)
-            self.showingNvc?.view.userInteractionEnabled = true
+            self.showingVc!.view.transform = CGAffineTransformTranslate(transform, removeDistance, 0)
+            self.showingVc?.view.addSubview(self.coverBtn!)
+            self.showingVc?.view.userInteractionEnabled = true
             })
+        
         
     }
     
     func clickRightBarButtonItem() {
+        let rightVc = self.childViewControllers.last
+        self.view.addSubview((rightVc?.view)!)
+        self.view.insertSubview((rightVc?.view)!, atIndex: 1)
         
+        UIView.animateWithDuration(duration, animations: { () -> Void in
+            let scale: CGFloat = (kScreenHeight - 2 * 64) / kScreenHeight
+            let removeDistance: CGFloat = -self.rightMenuW
+            
+            let transform = CGAffineTransformMakeScale(scale, scale)
+            self.showingVc!.view.transform = CGAffineTransformTranslate(transform, removeDistance, 0)
+            self.showingVc?.view.addSubview(self.coverBtn!)
+            self.showingVc?.view.userInteractionEnabled = true
+            }) { (finish: Bool) -> Void in
+                NSNotificationCenter.defaultCenter().postNotificationName(kZYRightBarButtonDidClickNotification, object: nil)
+        }
     }
     
     func clickCoverBtn(btn: UIButton) {
         
         UIView.animateWithDuration(duration, animations: { () -> Void in
-            self.showingNvc?.view.transform = CGAffineTransformIdentity
+            self.showingVc?.view.transform = CGAffineTransformIdentity
             }) { (finished: Bool) -> Void in
             btn.removeFromSuperview()
             self.leftMenuView.hidden = true
+            let rightVc = self.childViewControllers.last
+            rightVc?.view.removeFromSuperview()
         }
     }
     
 //MARK:- ZYLeftMenuViewDelegate
     func leftMenuView(leftMenuView: ZYLeftMenuView, didClickButtonAtIndex index: Int) {
         let tmpVc: UIViewController! = self.childViewControllers[index]
-        if ( tmpVc != self.showingNvc) {
+        if ( tmpVc != self.showingVc) {
             self.view.addSubview(tmpVc.view)
             if (self.coverBtn != nil)
             {
                 self.coverBtn.removeFromSuperview()
                 tmpVc.view.addSubview(self.coverBtn)
             }
-            if (self.showingNvc != nil) {
-                tmpVc.view.transform = (self.showingNvc?.view.transform)!
-                self.showingNvc?.view.removeFromSuperview()
+            if (self.showingVc != nil) {
+                tmpVc.view.transform = (self.showingVc?.view.transform)!
+                self.showingVc?.view.removeFromSuperview()
             }
-            self.showingNvc = tmpVc
+            self.showingVc = tmpVc
         }
         
         if (self.coverBtn != nil) {
