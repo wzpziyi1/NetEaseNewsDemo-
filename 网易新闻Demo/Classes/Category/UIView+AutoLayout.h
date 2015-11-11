@@ -242,7 +242,6 @@ typedef void(^ALConstraintsBlock)(void);    // a block of method calls to the UI
 
 @end
 
-
 #pragma mark - NSLayoutConstraint+AutoLayout
 
 /**

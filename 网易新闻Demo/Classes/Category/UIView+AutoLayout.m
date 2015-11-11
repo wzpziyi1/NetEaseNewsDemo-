@@ -11,7 +11,6 @@
 
 #import "UIView+AutoLayout.h"
 
-
 #pragma mark - UIView+AutoLayout
 
 @implementation UIView (AutoLayout)
@@ -867,14 +866,9 @@ static BOOL _al_isExecutingConstraintsBlock = NO;
 
 @end
 
-
 #pragma mark - NSLayoutConstraint+AutoLayout
 
 @implementation NSLayoutConstraint (AutoLayout)
-
-/**
- Adds the constraint to the appropriate view.
- */
 - (void)autoInstall
 {
     NSAssert(self.firstItem || self.secondItem, @"Can't install a constraint with nil firstItem and secondItem.");

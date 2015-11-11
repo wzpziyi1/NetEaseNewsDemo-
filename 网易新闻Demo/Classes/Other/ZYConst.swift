@@ -22,7 +22,9 @@ let kZYRightBarButtonDidClickNotification = "kZYRightBarButtonDidClickNotificati
  */
  // 判断系统版本
 func kIS_IOS7() ->Bool { return (UIDevice.currentDevice().systemVersion as NSString).doubleValue >= 7.0 }
+
 func kIS_IOS8() -> Bool { return (UIDevice.currentDevice().systemVersion as NSString).doubleValue >= 8.0 }
+
 func KIS_IOS9() -> Bool { return (UIDevice.currentDevice().systemVersion as NSString).doubleValue >= 9.0 }
 // RGBA的颜色设置
 func kRGBA (r:CGFloat, g:CGFloat, b:CGFloat, a:CGFloat) -> UIColor {
