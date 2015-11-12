@@ -26,8 +26,11 @@ class ZYRightViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.setupCenterView()
+        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "setupIconAnimate", name: kZYRightBarButtonDidClickNotification, object: nil)
+        
     }
     
 //MARK:- setup Method
@@ -38,13 +41,17 @@ class ZYRightViewController: UIViewController {
     @objc private func setupIconAnimate() {
         
         UIView.transitionWithView(self.iconImageView, duration: 1, options: UIViewAnimationOptions.TransitionFlipFromLeft, animations: {() ->Void in
+            
                 self.iconImageView.image = UIImage(named: "default_avatar")
+            
             }) { (finished: Bool) -> Void in
+                
                 UIView.transitionWithView(self.iconImageView, duration: 1, options: UIViewAnimationOptions.TransitionFlipFromRight, animations: { () -> Void in
                         self.iconImageView.image = UIImage(named: "user_defaultgift")
                     }, completion: { (finished: Bool) -> Void in
                         
                 })
+                
         }
     }
     
@@ -54,6 +61,7 @@ class ZYRightViewController: UIViewController {
         
         let centerView = ZYRightCenterView()
         self.view.addSubview(centerView)
+        
         centerView.autoPinEdgeToSuperviewEdge(ALEdge.Left, withInset: leftMargin)
         centerView.autoPinEdgeToSuperviewEdge(ALEdge.Right, withInset: leftMargin)
         centerView.autoPinEdge(ALEdge.Top, toEdge: ALEdge.Bottom, ofView: self.iconImageView, withOffset: topMargin)

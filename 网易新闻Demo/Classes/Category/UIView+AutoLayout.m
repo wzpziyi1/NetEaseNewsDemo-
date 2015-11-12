@@ -15,7 +15,6 @@
 
 @implementation UIView (AutoLayout)
 
-
 #pragma mark Factory & Initializer Methods
 
 + (instancetype)newAutoLayoutView

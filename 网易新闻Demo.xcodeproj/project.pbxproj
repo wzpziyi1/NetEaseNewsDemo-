@@ -29,6 +29,9 @@
 		09B92B4D1BF313030071DAA2 /* ZYRightCenterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B92B4B1BF313030071DAA2 /* ZYRightCenterCell.swift */; };
 		09B92B4E1BF313030071DAA2 /* ZYRightCenterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09B92B4C1BF313030071DAA2 /* ZYRightCenterCell.xib */; };
 		09E343D11BF422C000ADD764 /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E343D01BF422C000ADD764 /* NSDateExtension.swift */; };
+		09E343D71BF4468C00ADD764 /* CWAttributeStringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E343D41BF4468C00ADD764 /* CWAttributeStringUtils.swift */; };
+		09E343D81BF4468C00ADD764 /* CWBarStyleUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E343D51BF4468C00ADD764 /* CWBarStyleUtils.swift */; };
+		09E343D91BF4468C00ADD764 /* CWRegexUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E343D61BF4468C00ADD764 /* CWRegexUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +82,9 @@
 		09B92B4B1BF313030071DAA2 /* ZYRightCenterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYRightCenterCell.swift; sourceTree = "<group>"; };
 		09B92B4C1BF313030071DAA2 /* ZYRightCenterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZYRightCenterCell.xib; sourceTree = "<group>"; };
 		09E343D01BF422C000ADD764 /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtension.swift; sourceTree = "<group>"; };
+		09E343D41BF4468C00ADD764 /* CWAttributeStringUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CWAttributeStringUtils.swift; sourceTree = "<group>"; };
+		09E343D51BF4468C00ADD764 /* CWBarStyleUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CWBarStyleUtils.swift; sourceTree = "<group>"; };
+		09E343D61BF4468C00ADD764 /* CWRegexUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CWRegexUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +164,7 @@
 		09347F401BF0336900F10657 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				09E343D31BF4468C00ADD764 /* Tool */,
 				09347F431BF0336900F10657 /* Library */,
 				09347F4A1BF0385200F10657 /* Category */,
 				09347F411BF0336900F10657 /* Controller */,
@@ -228,6 +235,16 @@
 				09E343D01BF422C000ADD764 /* NSDateExtension.swift */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		09E343D31BF4468C00ADD764 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				09E343D41BF4468C00ADD764 /* CWAttributeStringUtils.swift */,
+				09E343D51BF4468C00ADD764 /* CWBarStyleUtils.swift */,
+				09E343D61BF4468C00ADD764 /* CWRegexUtils.swift */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,12 +386,15 @@
 				09B92B4D1BF313030071DAA2 /* ZYRightCenterCell.swift in Sources */,
 				09347F611BF0670900F10657 /* UIBarButtonItemExtension.swift in Sources */,
 				09347F4E1BF0387500F10657 /* UIView+AutoLayout.m in Sources */,
+				09E343D71BF4468C00ADD764 /* CWAttributeStringUtils.swift in Sources */,
 				0929574B1BF091BD0050B76C /* ZYTitleView.swift in Sources */,
 				09347F481BF0336900F10657 /* ZYMainViewController.swift in Sources */,
 				09347F5D1BF04B7C00F10657 /* ZYConst.swift in Sources */,
 				0904A8A01BF1879800D8E593 /* ZYAdvertViewController.swift in Sources */,
+				09E343D81BF4468C00ADD764 /* CWBarStyleUtils.swift in Sources */,
 				09E343D11BF422C000ADD764 /* NSDateExtension.swift in Sources */,
 				09347F631BF06D4700F10657 /* ZYNavigationBar.swift in Sources */,
+				09E343D91BF4468C00ADD764 /* CWRegexUtils.swift in Sources */,
 				09347F651BF07C0C00F10657 /* ZYNewsViewController.swift in Sources */,
 				09347F161BF02D1800F10657 /* ____Demo.xcdatamodeld in Sources */,
 				09347F5F1BF066CD00F10657 /* ZYMainNavigationController.swift in Sources */,

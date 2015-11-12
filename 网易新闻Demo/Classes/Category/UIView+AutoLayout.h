@@ -6,8 +6,6 @@
 //  Copyright (c) 2012 Richard Turton
 //  Copyright (c) 2013 Tyler Fox
 //
-
-
 #import <UIKit/UIKit.h>
 
 #pragma mark ALAttributes
@@ -34,7 +32,6 @@ typedef NS_ENUM(NSInteger, ALAxis) {
 
 typedef void(^ALConstraintsBlock)(void);    // a block of method calls to the UIView+AutoLayout category API
 
-
 #pragma mark - UIView+AutoLayout
 
 /**
@@ -54,8 +51,6 @@ typedef void(^ALConstraintsBlock)(void);    // a block of method calls to the UI
 
 #pragma mark Set Constraint Priority
 
-/** Sets the constraint priority to the given value for all constraints created using the UIView+AutoLayout category API within the given constraints block.
-    NOTE: This method will have no effect (and will NOT set the priority) on constraints created or added using the SDK directly within the block! */
 + (void)autoSetPriority:(UILayoutPriority)priority forConstraints:(ALConstraintsBlock)block;
 
 
@@ -67,9 +62,6 @@ typedef void(^ALConstraintsBlock)(void);    // a block of method calls to the UI
 /** Removes the given constraints from the views they have been added to. */
 + (void)autoRemoveConstraints:(NSArray *)constraints;
 
-/** Removes all explicit constraints that affect the view.
-    WARNING: Apple's constraint solver is not optimized for large-scale constraint removal; you may encounter major performance issues after using this method.
-    NOTE: This method preserves implicit constraints, such as intrinsic content size constraints, which you usually do not want to remove. */
 - (void)autoRemoveConstraintsAffectingView;
 
 /** Removes all constraints that affect the view, optionally including implicit constraints.
@@ -77,16 +69,9 @@ typedef void(^ALConstraintsBlock)(void);    // a block of method calls to the UI
     NOTE: Implicit constraints are auto-generated lower priority constraints, and you usually do not want to remove these. */
 - (void)autoRemoveConstraintsAffectingViewIncludingImplicitConstraints:(BOOL)shouldRemoveImplicitConstraints;
 
-/** Recursively removes all explicit constraints that affect the view and its subviews.
-    WARNING: Apple's constraint solver is not optimized for large-scale constraint removal; you may encounter major performance issues after using this method.
-    NOTE: This method preserves implicit constraints, such as intrinsic content size constraints, which you usually do not want to remove. */
 - (void)autoRemoveConstraintsAffectingViewAndSubviews;
 
-/** Recursively removes all constraints from the view and its subviews, optionally including implicit constraints.
-    WARNING: Apple's constraint solver is not optimized for large-scale constraint removal; you may encounter major performance issues after using this method.
-    NOTE: Implicit constraints are auto-generated lower priority constraints, and you usually do not want to remove these. */
 - (void)autoRemoveConstraintsAffectingViewAndSubviewsIncludingImplicitConstraints:(BOOL)shouldRemoveImplicitConstraints;
-
 
 #pragma mark Center in Superview
 
@@ -95,7 +80,6 @@ typedef void(^ALConstraintsBlock)(void);    // a block of method calls to the UI
 
 /** Aligns the view to the same axis of its superview. */
 - (NSLayoutConstraint *)autoAlignAxisToSuperviewAxis:(ALAxis)axis;
-
 
 #pragma mark Pin Edges to Superview
 
@@ -110,7 +94,6 @@ typedef void(^ALConstraintsBlock)(void);    // a block of method calls to the UI
 
 /** Pins 3 of the 4 edges of the view to the edges of its superview with the given edge insets, excluding one edge. */
 - (NSArray *)autoPinEdgesToSuperviewEdgesWithInsets:(UIEdgeInsets)insets excludingEdge:(ALEdge)edge;
-
 
 #pragma mark Pin Edges
 
@@ -132,7 +115,6 @@ typedef void(^ALConstraintsBlock)(void);    // a block of method calls to the UI
 /** Aligns an axis of the view to the same axis of another view with an offset. */
 - (NSLayoutConstraint *)autoAlignAxis:(ALAxis)axis toSameAxisOfView:(UIView *)peerView withOffset:(CGFloat)offset;
 
-
 #pragma mark Match Dimensions
 
 /** Matches a dimension of the view to a given dimension of another view. */
@@ -150,7 +132,6 @@ typedef void(^ALConstraintsBlock)(void);    // a block of method calls to the UI
 /** Matches a dimension of the view to a multiple of a given dimension of another view as a maximum or minimum. */
 - (NSLayoutConstraint *)autoMatchDimension:(ALDimension)dimension toDimension:(ALDimension)toDimension ofView:(UIView *)peerView withMultiplier:(CGFloat)multiplier relation:(NSLayoutRelation)relation;
 
-
 #pragma mark Set Dimensions
 
 /** Sets the view to a specific size. */
@@ -162,7 +143,6 @@ typedef void(^ALConstraintsBlock)(void);    // a block of method calls to the UI
 /** Sets the given dimension of the view to a specific size as a maximum or minimum. */
 - (NSLayoutConstraint *)autoSetDimension:(ALDimension)dimension toSize:(CGFloat)size relation:(NSLayoutRelation)relation;
 
-
 #pragma mark Set Content Compression Resistance & Hugging
 
 /** Sets the priority of content compression resistance for an axis.
@@ -172,7 +152,6 @@ typedef void(^ALConstraintsBlock)(void);    // a block of method calls to the UI
 /** Sets the priority of content hugging for an axis.
     NOTE: This method must only be called from within the block passed into the method +[UIView autoSetPriority:forConstraints:] */
 - (void)autoSetContentHuggingPriorityForAxis:(ALAxis)axis;
-
 
 #pragma mark Constrain Any Attributes
 
@@ -202,14 +181,9 @@ typedef void(^ALConstraintsBlock)(void);    // a block of method calls to the UI
 
 @end
 
-
 #pragma mark - NSArray+AutoLayout
 
-/**
- A category on NSArray that provides a simple yet powerful interface for applying constraints to groups of views.
- */
 @interface NSArray (AutoLayout)
-
 
 #pragma mark Constrain Multiple Views
 
@@ -225,7 +199,6 @@ typedef void(^ALConstraintsBlock)(void);    // a block of method calls to the UI
 /** Sets the given dimension of all the views in this array to a given size. */
 - (NSArray *)autoSetViewsDimension:(ALDimension)dimension toSize:(CGFloat)size;
 
-
 #pragma mark Distribute Multiple Views
 
 /** Distributes the views in this array equally along the selected axis in their superview. Views will be the same size (variable) in the dimension along the axis and will have spacing (fixed) between them. */
@@ -237,22 +210,15 @@ typedef void(^ALConstraintsBlock)(void);    // a block of method calls to the UI
 /** Distributes the views in this array equally along the selected axis in their superview. Views will be the same size (fixed) in the dimension along the axis and will have spacing (variable) between them. */
 - (NSArray *)autoDistributeViewsAlongAxis:(ALAxis)axis withFixedSize:(CGFloat)size alignment:(NSLayoutFormatOptions)alignment;
 
-/** Distributes the views in this array equally along the selected axis in their superview. Views will be the same size (fixed) in the dimension along the axis and will have spacing (variable) between them, with optional insets from the first and last views to their superview. */
 - (NSArray *)autoDistributeViewsAlongAxis:(ALAxis)axis withFixedSize:(CGFloat)size insetSpacing:(BOOL)shouldSpaceInsets alignment:(NSLayoutFormatOptions)alignment;
 
 @end
 
 #pragma mark - NSLayoutConstraint+AutoLayout
 
-/**
- A category on NSLayoutConstraint that allows constraints to be easily removed.
- */
 @interface NSLayoutConstraint (AutoLayout)
 
-/** Adds the constraint to the appropriate view. */
 - (void)autoInstall;
-
-/** Removes the constraint from the view it has been added to. */
 - (void)autoRemove;
 
 @end
