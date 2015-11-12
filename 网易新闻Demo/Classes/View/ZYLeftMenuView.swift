@@ -9,7 +9,9 @@
 import UIKit
 
 @objc protocol ZYLeftMenuViewDelegate: NSObjectProtocol{
+    
     optional func leftMenuView(leftMenuView: ZYLeftMenuView, didClickButtonAtIndex index: Int)
+    
 }
 
 class ZYLeftMenuView: UIView {

@@ -10,7 +10,8 @@ import UIKit
 
 class ZYRightViewController: UIViewController {
 
-    //MARK:- constant
+//MARK:- constant
+    
     let duration: NSTimeInterval = 0.5
     
     @IBOutlet weak private var iconImageView: UIImageView!
@@ -30,6 +31,7 @@ class ZYRightViewController: UIViewController {
     }
     
 //MARK:- setup Method
+    
     @objc private func setupIconAnimate() {
         
         UIView.transitionWithView(self.iconImageView, duration: 1, options: UIViewAnimationOptions.TransitionFlipFromLeft, animations: {() ->Void in

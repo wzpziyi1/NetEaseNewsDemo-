@@ -16,7 +16,7 @@ class ZYAdvertViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.setupBackgroundView()
         
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (Int64)(3 * NSEC_PER_SEC)), dispatch_get_main_queue()) { () -> Void in
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (Int64)(2 * NSEC_PER_SEC)), dispatch_get_main_queue()) { () -> Void in
             let window = UIApplication.sharedApplication().keyWindow
             window?.rootViewController = ZYMainViewController()
         }

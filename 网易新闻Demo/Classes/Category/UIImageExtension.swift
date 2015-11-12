@@ -10,6 +10,13 @@ import UIKit
 
 extension UIImage {
 
+    //拉升图片，而不改变图片的形状
+    class func resizedImage(imageName: String) ->UIImage {
+        let image = UIImage(named: imageName)
+        return (image?.stretchableImageWithLeftCapWidth(Int((image?.size.width)! * 0.5), topCapHeight: Int((image?.size.height)! * 0.5)))!
+    }
+    
+    //根据color生成一张对应的图片
     class func imageWithColor(color: UIColor) ->UIImage {
         let imageW: CGFloat = 100
         let imageH: CGFloat = 100

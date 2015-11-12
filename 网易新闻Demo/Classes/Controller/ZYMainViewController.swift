@@ -11,6 +11,7 @@ import UIKit
 class ZYMainViewController: UIViewController, ZYLeftMenuViewDelegate {
 
 //MARK:- 常量
+    
     let leftMenuH: CGFloat = 300
     let leftMenuW: CGFloat = 150
     let duration: NSTimeInterval = 0.5
@@ -18,6 +19,7 @@ class ZYMainViewController: UIViewController, ZYLeftMenuViewDelegate {
     let rightMenuW: CGFloat = kScreenWidth - 50
     
 //MARK:- UI控件
+    
     private weak var leftMenuView: ZYLeftMenuView!
     private weak var newsVc: ZYNewsViewController!
     private weak var showingVc: UIViewController?
@@ -41,6 +43,7 @@ class ZYMainViewController: UIViewController, ZYLeftMenuViewDelegate {
  
     
 //MARK:- setup系列
+    
     private func setupImage() {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "sidebar_bg")
@@ -121,6 +124,7 @@ class ZYMainViewController: UIViewController, ZYLeftMenuViewDelegate {
 //    }
 
 //MARK:- 点击事件
+    
     func clickLeftBarButtonItem() {
         self.showingVc?.view.userInteractionEnabled = false
         self.leftMenuView.hidden = false
@@ -168,6 +172,7 @@ class ZYMainViewController: UIViewController, ZYLeftMenuViewDelegate {
     
     
 //MARK:- ZYLeftMenuViewDelegate
+    
     func leftMenuView(leftMenuView: ZYLeftMenuView, didClickButtonAtIndex index: Int) {
         let tmpVc: UIViewController! = self.childViewControllers[index]
         if ( tmpVc != self.showingVc) {

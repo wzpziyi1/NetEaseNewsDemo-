@@ -14,6 +14,7 @@ class ZYMainNavigationController: UINavigationController {
         let appearance = UINavigationBar.appearance()
         appearance.setBackgroundImage(UIImage(named: "top_navigation_background"), forBarMetrics: UIBarMetrics.Default)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setValue(ZYNavigationBar(), forKeyPath: "navigationBar")
