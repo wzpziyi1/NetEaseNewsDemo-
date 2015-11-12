@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x7f51;&#x6613;&#x65b0;&#x95fb;Demo/Classes/Category/UIImageExtension.swift"
-            timestampString = "468737964.501404"
+            timestampString = "468998085.508562"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "imageWithColor(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x7f51;&#x6613;&#x65b0;&#x95fb;Demo/Classes/Controller/ZYMainViewController.swift"
-            timestampString = "468920650.610345"
+            timestampString = "468998085.508562"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
             landmarkName = "createNavigationVc(_:title:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x7f51;&#x6613;&#x65b0;&#x95fb;Demo/Classes/Controller/ZYRightViewController.swift"
-            timestampString = "468923285.791908"
+            timestampString = "468998085.508562"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "setupCenterView()"
             landmarkType = "5">
          </BreakpointContent>
@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x7f51;&#x6613;&#x65b0;&#x95fb;Demo/Classes/Controller/ZYRightViewController.swift"
-            timestampString = "468923285.791908"
+            timestampString = "468998085.508562"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "setupCenterView()"
             landmarkType = "5">
          </BreakpointContent>
@@ -186,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x7f51;&#x6613;&#x65b0;&#x95fb;Demo/Classes/Controller/ZYRightViewController.swift"
-            timestampString = "468923285.791908"
+            timestampString = "468998085.508562"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "setupCenterView()"
             landmarkType = "5">
          </BreakpointContent>
@@ -202,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x7f51;&#x6613;&#x65b0;&#x95fb;Demo/Classes/Controller/ZYRightViewController.swift"
-            timestampString = "468923285.791908"
+            timestampString = "468998085.508562"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "setupCenterView()"
             landmarkType = "5">
          </BreakpointContent>
@@ -266,11 +266,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x7f51;&#x6613;&#x65b0;&#x95fb;Demo/Classes/Controller/ZYMainViewController.swift"
-            timestampString = "468922948.373289"
+            timestampString = "468998085.508562"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
             landmarkName = "clickLeftBarButtonItem()"
             landmarkType = "5">
          </BreakpointContent>
@@ -282,11 +282,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x7f51;&#x6613;&#x65b0;&#x95fb;Demo/Classes/Category/NSDateExtension.swift"
-            timestampString = "468989095.947144"
+            timestampString = "468998085.508562"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
             landmarkName = "isToday()"
             landmarkType = "5">
          </BreakpointContent>
