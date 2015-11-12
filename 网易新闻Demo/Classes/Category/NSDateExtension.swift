@@ -9,6 +9,11 @@
 import UIKit
 
 extension NSDate {
+    /**
+     判断是否为今天
+     
+     - returns: Bool
+     */
     func isToday() ->Bool {
         let calendar = NSCalendar.currentCalendar()
         
@@ -19,7 +24,11 @@ extension NSDate {
         
         return (nowComponent.year == selfComponent.year && nowComponent.month == selfComponent.month && nowComponent.day == selfComponent.day)
     }
-    
+    /**
+     是否为昨天
+     
+     - returns: Bool
+     */
     func isYesterday() ->Bool {
         let calendar = NSCalendar.currentCalendar()
         let nowDate = NSDate().dateWithYMD()
@@ -30,6 +39,11 @@ extension NSDate {
         return (component.year == 0 && component.month == 0 && component.day == 1)
     }
     
+    /**
+     是否为今年
+     
+     - returns: Bool
+     */
     func isThisYear() ->Bool {
         let calendar = NSCalendar.currentCalendar()
         
@@ -41,6 +55,11 @@ extension NSDate {
         return (nowComponent.year == selfComponent.year)
     }
     
+    /**
+     与现在差的时间
+     
+     - returns: NSDateComponents
+     */
     func deltaWithNow() ->NSDateComponents {
         let calendar = NSCalendar.currentCalendar()
         
