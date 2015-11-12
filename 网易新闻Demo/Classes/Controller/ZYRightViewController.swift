@@ -32,6 +32,9 @@ class ZYRightViewController: UIViewController {
     
 //MARK:- setup Method
     
+    /**
+    设置图标动画，这个函数必须是private，但是如果只设置为private的话，当用Seletor调用这个函数在运行时会崩溃，@objc修饰，主要是为了在运行时不崩溃
+    */
     @objc private func setupIconAnimate() {
         
         UIView.transitionWithView(self.iconImageView, duration: 1, options: UIViewAnimationOptions.TransitionFlipFromLeft, animations: {() ->Void in

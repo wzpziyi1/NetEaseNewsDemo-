@@ -5,7 +5,12 @@
 //  Created by 王志盼 on 15/11/9.
 //  Copyright © 2015年 王志盼. All rights reserved.
 //
-
+//
+/* 
+    swift中默认都是强引用，但是可以使用weak修饰变量，来产生弱引用
+    建议所有UI控件使用private修饰，始终不暴露它
+    有选择的使用weak修饰UI控件
+*/
 import UIKit
 
 class ZYMainViewController: UIViewController, ZYLeftMenuViewDelegate {
@@ -125,7 +130,7 @@ class ZYMainViewController: UIViewController, ZYLeftMenuViewDelegate {
 
 //MARK:- 点击事件
     
-    func clickLeftBarButtonItem() {
+    @objc private func clickLeftBarButtonItem() {
         self.showingVc?.view.userInteractionEnabled = false
         self.leftMenuView.hidden = false
         UIView.animateWithDuration(duration, animations: { () -> Void in
@@ -140,7 +145,7 @@ class ZYMainViewController: UIViewController, ZYLeftMenuViewDelegate {
         
     }
     
-    func clickRightBarButtonItem() {
+    @objc private func clickRightBarButtonItem() {
         let rightVc = self.childViewControllers.last
         self.view.addSubview((rightVc?.view)!)
         self.view.insertSubview((rightVc?.view)!, atIndex: 1)
@@ -158,7 +163,7 @@ class ZYMainViewController: UIViewController, ZYLeftMenuViewDelegate {
         }
     }
     
-    func clickCoverBtn(btn: UIButton) {
+    @objc private func clickCoverBtn(btn: UIButton) {
         
         UIView.animateWithDuration(duration, animations: { () -> Void in
             self.showingVc?.view.transform = CGAffineTransformIdentity
