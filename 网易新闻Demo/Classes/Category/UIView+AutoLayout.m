@@ -23,7 +23,6 @@
     view.translatesAutoresizingMaskIntoConstraints = NO;
     return view;
 }
-
 - (instancetype)initForAutoLayout
 {
     self = [self init];
@@ -36,9 +35,7 @@
 #pragma mark Set Constraint Priority
 
 static UILayoutPriority _al_globalConstraintPriority = UILayoutPriorityRequired;
-
 static BOOL _al_isExecutingConstraintsBlock = NO;
-
 + (void)autoSetPriority:(UILayoutPriority)priority forConstraints:(ALConstraintsBlock)block
 {
     NSAssert(block, @"The constraints block cannot be nil.");
@@ -71,7 +68,6 @@ static BOOL _al_isExecutingConstraintsBlock = NO;
     }
     NSAssert(nil, @"Failed to remove constraint: %@", constraint);
 }
-
 + (void)autoRemoveConstraints:(NSArray *)constraints
 {
     for (id object in constraints) {
@@ -82,12 +78,10 @@ static BOOL _al_isExecutingConstraintsBlock = NO;
         }
     }
 }
-
 - (void)autoRemoveConstraintsAffectingView
 {
     [self autoRemoveConstraintsAffectingViewIncludingImplicitConstraints:NO];
 }
-
 - (void)autoRemoveConstraintsAffectingViewIncludingImplicitConstraints:(BOOL)shouldRemoveImplicitConstraints
 {
     NSMutableArray *constraintsToRemove = [NSMutableArray new];
@@ -105,12 +99,10 @@ static BOOL _al_isExecutingConstraintsBlock = NO;
     } while (startView);
     [UIView autoRemoveConstraints:constraintsToRemove];
 }
-
 - (void)autoRemoveConstraintsAffectingViewAndSubviews
 {
     [self autoRemoveConstraintsAffectingViewAndSubviewsIncludingImplicitConstraints:NO];
 }
-
 - (void)autoRemoveConstraintsAffectingViewAndSubviewsIncludingImplicitConstraints:(BOOL)shouldRemoveImplicitConstraints
 {
     [self autoRemoveConstraintsAffectingViewIncludingImplicitConstraints:shouldRemoveImplicitConstraints];
@@ -128,7 +120,6 @@ static BOOL _al_isExecutingConstraintsBlock = NO;
     [constraints addObject:[self autoAlignAxisToSuperviewAxis:ALAxisVertical]];
     return constraints;
 }
-
 - (NSLayoutConstraint *)autoAlignAxisToSuperviewAxis:(ALAxis)axis
 {
     self.translatesAutoresizingMaskIntoConstraints = NO;
@@ -146,7 +137,6 @@ static BOOL _al_isExecutingConstraintsBlock = NO;
 {
     return [self autoPinEdgeToSuperviewEdge:edge withInset:inset relation:NSLayoutRelationEqual];
 }
-
 - (NSLayoutConstraint *)autoPinEdgeToSuperviewEdge:(ALEdge)edge withInset:(CGFloat)inset relation:(NSLayoutRelation)relation
 {
     self.translatesAutoresizingMaskIntoConstraints = NO;
@@ -163,7 +153,6 @@ static BOOL _al_isExecutingConstraintsBlock = NO;
     }
     return [self autoPinEdge:edge toEdge:edge ofView:superview withOffset:inset relation:relation];
 }
-
 - (NSArray *)autoPinEdgesToSuperviewEdgesWithInsets:(UIEdgeInsets)insets
 {
     NSMutableArray *constraints = [NSMutableArray new];
@@ -173,7 +162,6 @@ static BOOL _al_isExecutingConstraintsBlock = NO;
     [constraints addObject:[self autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:insets.right]];
     return constraints;
 }
-
 - (NSArray *)autoPinEdgesToSuperviewEdgesWithInsets:(UIEdgeInsets)insets excludingEdge:(ALEdge)edge
 {
     NSMutableArray *constraints = [NSMutableArray new];
@@ -193,18 +181,14 @@ static BOOL _al_isExecutingConstraintsBlock = NO;
 }
 
 #pragma mark Pin Edges
-
 - (NSLayoutConstraint *)autoPinEdge:(ALEdge)edge toEdge:(ALEdge)toEdge ofView:(UIView *)peerView
 {
     return [self autoPinEdge:edge toEdge:toEdge ofView:peerView withOffset:0.0f];
 }
-
-
 - (NSLayoutConstraint *)autoPinEdge:(ALEdge)edge toEdge:(ALEdge)toEdge ofView:(UIView *)peerView withOffset:(CGFloat)offset
 {
     return [self autoPinEdge:edge toEdge:toEdge ofView:peerView withOffset:offset relation:NSLayoutRelationEqual];
 }
-
 - (NSLayoutConstraint *)autoPinEdge:(ALEdge)edge toEdge:(ALEdge)toEdge ofView:(UIView *)peerView withOffset:(CGFloat)offset relation:(NSLayoutRelation)relation
 {
     self.translatesAutoresizingMaskIntoConstraints = NO;
@@ -221,7 +205,6 @@ static BOOL _al_isExecutingConstraintsBlock = NO;
 {
     return [self autoAlignAxis:axis toSameAxisOfView:peerView withOffset:0.0f];
 }
-
 - (NSLayoutConstraint *)autoAlignAxis:(ALAxis)axis toSameAxisOfView:(UIView *)peerView withOffset:(CGFloat)offset
 {
     self.translatesAutoresizingMaskIntoConstraints = NO;
@@ -237,12 +220,10 @@ static BOOL _al_isExecutingConstraintsBlock = NO;
 {
     return [self autoMatchDimension:dimension toDimension:toDimension ofView:peerView withOffset:0.0f];
 }
-
 - (NSLayoutConstraint *)autoMatchDimension:(ALDimension)dimension toDimension:(ALDimension)toDimension ofView:(UIView *)peerView withOffset:(CGFloat)offset
 {
     return [self autoMatchDimension:dimension toDimension:toDimension ofView:peerView withOffset:offset relation:NSLayoutRelationEqual];
 }
-
 - (NSLayoutConstraint *)autoMatchDimension:(ALDimension)dimension toDimension:(ALDimension)toDimension ofView:(UIView *)peerView withOffset:(CGFloat)offset relation:(NSLayoutRelation)relation
 {
     self.translatesAutoresizingMaskIntoConstraints = NO;
@@ -252,12 +233,10 @@ static BOOL _al_isExecutingConstraintsBlock = NO;
     [constraint autoInstall];
     return constraint;
 }
-
 - (NSLayoutConstraint *)autoMatchDimension:(ALDimension)dimension toDimension:(ALDimension)toDimension ofView:(UIView *)peerView withMultiplier:(CGFloat)multiplier
 {
     return [self autoMatchDimension:dimension toDimension:toDimension ofView:peerView withMultiplier:multiplier relation:NSLayoutRelationEqual];
 }
-
 - (NSLayoutConstraint *)autoMatchDimension:(ALDimension)dimension toDimension:(ALDimension)toDimension ofView:(UIView *)peerView withMultiplier:(CGFloat)multiplier relation:(NSLayoutRelation)relation
 {
     self.translatesAutoresizingMaskIntoConstraints = NO;
@@ -277,7 +256,6 @@ static BOOL _al_isExecutingConstraintsBlock = NO;
     [constraints addObject:[self autoSetDimension:ALDimensionHeight toSize:size.height]];
     return constraints;
 }
-
 - (NSLayoutConstraint *)autoSetDimension:(ALDimension)dimension toSize:(CGFloat)size
 {
     return [self autoSetDimension:dimension toSize:size relation:NSLayoutRelationEqual];
@@ -292,7 +270,6 @@ static BOOL _al_isExecutingConstraintsBlock = NO;
 }
 
 #pragma mark Set Content Compression Resistance & Hugging
-
 - (void)autoSetContentCompressionResistancePriorityForAxis:(ALAxis)axis
 {
     NSAssert(_al_isExecutingConstraintsBlock, @"%@ should only be called from within the block passed into the method +[UIView autoSetPriority:forConstraints:]", NSStringFromSelector(_cmd));
@@ -302,7 +279,6 @@ static BOOL _al_isExecutingConstraintsBlock = NO;
         [self setContentCompressionResistancePriority:_al_globalConstraintPriority forAxis:constraintAxis];
     }
 }
-
 - (void)autoSetContentHuggingPriorityForAxis:(ALAxis)axis
 {
     NSAssert(_al_isExecutingConstraintsBlock, @"%@ should only be called from within the block passed into the method +[UIView autoSetPriority:forConstraints:]", NSStringFromSelector(_cmd));
@@ -319,7 +295,6 @@ static BOOL _al_isExecutingConstraintsBlock = NO;
 {
     return [self autoConstrainAttribute:ALAttribute toAttribute:toALAttribute ofView:peerView withOffset:0.0f];
 }
-
 - (NSLayoutConstraint *)autoConstrainAttribute:(NSInteger)ALAttribute toAttribute:(NSInteger)toALAttribute ofView:(UIView *)peerView withOffset:(CGFloat)offset
 {
     return [self autoConstrainAttribute:ALAttribute toAttribute:toALAttribute ofView:peerView withOffset:offset relation:NSLayoutRelationEqual];
@@ -334,12 +309,10 @@ static BOOL _al_isExecutingConstraintsBlock = NO;
     [constraint autoInstall];
     return constraint;
 }
-
 - (NSLayoutConstraint *)autoConstrainAttribute:(NSInteger)ALAttribute toAttribute:(NSInteger)toALAttribute ofView:(UIView *)peerView withMultiplier:(CGFloat)multiplier
 {
     return [self autoConstrainAttribute:ALAttribute toAttribute:toALAttribute ofView:peerView withMultiplier:multiplier relation:NSLayoutRelationEqual];
 }
-
 - (NSLayoutConstraint *)autoConstrainAttribute:(NSInteger)ALAttribute toAttribute:(NSInteger)toALAttribute ofView:(UIView *)peerView withMultiplier:(CGFloat)multiplier relation:(NSLayoutRelation)relation
 {
     self.translatesAutoresizingMaskIntoConstraints = NO;
@@ -363,7 +336,6 @@ static BOOL _al_isExecutingConstraintsBlock = NO;
         return constraint;
     }
 }
-
 - (NSLayoutConstraint *)autoPinToBottomLayoutGuideOfViewController:(UIViewController *)viewController withInset:(CGFloat)inset
 {
     if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1) {
@@ -383,7 +355,6 @@ static BOOL _al_isExecutingConstraintsBlock = NO;
     constraint.priority = _al_globalConstraintPriority;
     [self addConstraint:constraint];
 }
-
 + (NSLayoutAttribute)al_attributeForEdge:(ALEdge)edge
 {
     NSLayoutAttribute attribute = NSLayoutAttributeNotAnAttribute;
@@ -412,7 +383,6 @@ static BOOL _al_isExecutingConstraintsBlock = NO;
     }
     return attribute;
 }
-
 + (NSLayoutAttribute)al_attributeForAxis:(ALAxis)axis
 {
     NSLayoutAttribute attribute = NSLayoutAttributeNotAnAttribute;
@@ -432,7 +402,6 @@ static BOOL _al_isExecutingConstraintsBlock = NO;
     }
     return attribute;
 }
-
 + (NSLayoutAttribute)al_attributeForDimension:(ALDimension)dimension
 {
     NSLayoutAttribute attribute = NSLayoutAttributeNotAnAttribute;
@@ -449,7 +418,6 @@ static BOOL _al_isExecutingConstraintsBlock = NO;
     }
     return attribute;
 }
-
 + (NSLayoutAttribute)al_attributeForALAttribute:(NSInteger)ALAttribute
 {
     NSLayoutAttribute attribute = NSLayoutAttributeNotAnAttribute;
@@ -493,7 +461,6 @@ static BOOL _al_isExecutingConstraintsBlock = NO;
     }
     return attribute;
 }
-
 + (UILayoutConstraintAxis)al_constraintAxisForAxis:(ALAxis)axis
 {
     UILayoutConstraintAxis constraintAxis;
@@ -511,7 +478,6 @@ static BOOL _al_isExecutingConstraintsBlock = NO;
     }
     return constraintAxis;
 }
-
 - (UIView *)al_commonSuperviewWithView:(UIView *)peerView
 {
     UIView *commonSuperview = nil;
@@ -525,7 +491,6 @@ static BOOL _al_isExecutingConstraintsBlock = NO;
     NSAssert(commonSuperview, @"Can't constrain two views that do not share a common superview. Make sure that both views have been added into the same view hierarchy.");
     return commonSuperview;
 }
-
 - (NSLayoutConstraint *)al_alignToView:(UIView *)peerView withOption:(NSLayoutFormatOptions)alignment forAxis:(ALAxis)axis
 {
     NSLayoutConstraint *constraint = nil;
@@ -598,7 +563,6 @@ static BOOL _al_isExecutingConstraintsBlock = NO;
     }
     return constraints;
 }
-
 - (NSArray *)autoAlignViewsToAxis:(ALAxis)axis
 {
     NSAssert([self al_containsMinimumNumberOfViews:2], @"This array must contain at least 2 views.");
@@ -616,7 +580,6 @@ static BOOL _al_isExecutingConstraintsBlock = NO;
     }
     return constraints;
 }
-
 - (NSArray *)autoMatchViewsDimension:(ALDimension)dimension
 {
     NSAssert([self al_containsMinimumNumberOfViews:2], @"This array must contain at least 2 views.");
@@ -634,7 +597,6 @@ static BOOL _al_isExecutingConstraintsBlock = NO;
     }
     return constraints;
 }
-
 - (NSArray *)autoSetViewsDimension:(ALDimension)dimension toSize:(CGFloat)size
 {
     NSAssert([self al_containsMinimumNumberOfViews:1], @"This array must contain at least 1 view.");
@@ -655,7 +617,6 @@ static BOOL _al_isExecutingConstraintsBlock = NO;
 {
     return [self autoDistributeViewsAlongAxis:axis withFixedSpacing:spacing insetSpacing:YES alignment:alignment];
 }
-
 - (NSArray *)autoDistributeViewsAlongAxis:(ALAxis)axis withFixedSpacing:(CGFloat)spacing insetSpacing:(BOOL)shouldSpaceInsets alignment:(NSLayoutFormatOptions)alignment
 {
     NSAssert([self al_containsMinimumNumberOfViews:2], @"This array must contain at least 2 views to distribute.");
@@ -705,12 +666,10 @@ static BOOL _al_isExecutingConstraintsBlock = NO;
     }
     return constraints;
 }
-
 - (NSArray *)autoDistributeViewsAlongAxis:(ALAxis)axis withFixedSize:(CGFloat)size alignment:(NSLayoutFormatOptions)alignment
 {
     return [self autoDistributeViewsAlongAxis:axis withFixedSize:size insetSpacing:YES alignment:alignment];
 }
-
 - (NSArray *)autoDistributeViewsAlongAxis:(ALAxis)axis withFixedSize:(CGFloat)size insetSpacing:(BOOL)shouldSpaceInsets alignment:(NSLayoutFormatOptions)alignment
 {
     NSAssert([self al_containsMinimumNumberOfViews:2], @"This array must contain at least 2 views to distribute.");
@@ -781,7 +740,6 @@ static BOOL _al_isExecutingConstraintsBlock = NO;
     NSAssert(commonSuperview, @"Can't constrain views that do not share a common superview. Make sure that all the views in this array have been added into the same view hierarchy.");
     return commonSuperview;
 }
-
 - (BOOL)al_containsMinimumNumberOfViews:(NSUInteger)minimumNumberOfViews
 {
     NSUInteger numberOfViews = 0;
@@ -795,7 +753,6 @@ static BOOL _al_isExecutingConstraintsBlock = NO;
     }
     return numberOfViews >= minimumNumberOfViews;
 }
-
 - (NSArray *)al_copyViewsOnly
 {
     NSMutableArray *viewsOnlyArray = [NSMutableArray arrayWithCapacity:[self count]];
@@ -829,10 +786,8 @@ static BOOL _al_isExecutingConstraintsBlock = NO;
         [self.secondItem al_addConstraintUsingGlobalPriority:self];
     }
 }
-
 - (void)autoRemove
 {
     [UIView autoRemoveConstraint:self];
 }
-
 @end
